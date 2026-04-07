@@ -94,8 +94,8 @@ if par["var_feature_name"] == "index":
     adata.var["feature_name"] = adata.var.index
 else:
     if par["var_feature_name"] in adata.var:
-        adata.var["feature_name"] = adata.var[par["feature_name"]]
-        del adata.var[par["feature_name"]]
+        adata.var["feature_name"] = adata.var[par["var_feature_name"]]
+        del adata.var[par["var_feature_name"]]
     else:
         print(f"Warning: key '{par['var_feature_name']}' could not be found in adata.var.", flush=True)
 
@@ -105,8 +105,8 @@ if par["var_feature_id"] == "index":
     adata.var["feature_id"] = adata.var.index
 else:
     if par["var_feature_id"] in adata.var:
-        adata.var["feature_id"] = adata.var[par["feature_id"]]
-        del adata.var[par["feature_id"]]
+        adata.var["feature_id"] = adata.var[par["var_feature_id"]]
+        del adata.var[par["var_feature_id"]]
     else:
         print(f"Warning: key '{par['var_feature_id']}' could not be found in adata.var.", flush=True)
 
