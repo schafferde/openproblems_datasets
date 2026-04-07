@@ -21,8 +21,8 @@ meta = {
 
 # fetch dataset
 file_name = par["file_name"]
-print("Looking for file:", flush=True)
-while not os.path.isfile(file):
+print("Looking for file:", file_name, flush=True)
+while not os.path.isfile(file_name):
     time.sleep(30)
 time.sleep(15)
 

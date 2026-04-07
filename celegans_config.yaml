@@ -1,0 +1,41 @@
+id: celegans_embryo
+
+file_name: "Celegans_embryo_dataset.h5ad"
+
+obs_cell_type: "cell.type"
+
+obs_batch: batch
+
+var_feature_id: id
+
+var_feature_name: gene_short_name
+
+dataset_name: "C Elegans Embryo Atlas v1"
+
+dataset_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126954"
+
+dataset_reference: packer2019lineage
+
+dataset_summary: "profiling the transcriptomes of 86,024 single embryonic cells from C. elegans"
+
+dataset_description: "C elegans dataset produceed by Packer et al (2019), with poor quality and unlabeled cells removed"
+
+dataset_organism: caenorhabditis_elegans
+
+normalization_methods:
+  - log_cp10k
+  - sqrt_cp10k
+  - l1_sqrt
+
+output_dataset: dataset.h5ad
+
+output_raw: dataset_raw.h5ad
+
+output_normalized: dataset_normalized.h5ad
+
+output_pca: dataset_pca.h5ad
+
+output_hvg: dataset_hvg.h5ad
+
+output_knn: dataset_knn.h5ad
+

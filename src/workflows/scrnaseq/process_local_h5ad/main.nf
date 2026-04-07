@@ -12,7 +12,7 @@ workflow run_wf {
   input_ch
 
   main:
-
+  // input_ch.view { "Input received by Viash: $it" }
   // create different normalization methods by overriding the defaults
   normalization_methods = [
     log_cp.run(
