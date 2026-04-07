@@ -55,6 +55,8 @@ workflow run_wf {
         "obs_cell_type": "obs_cell_type",
         "obs_batch": "obs_batch",
         "obs_tissue": "obs_tissue",
+        "var_feature_name": "var_feature_name",
+        "var_feature_id": "var_feature_id",
         "layer_counts": "layer_counts",
         "sparse": "sparse",
         "dataset_id": "id",
