@@ -8,6 +8,8 @@ obs_batch: batch
 
 obs_tissue: location
 
+var_feature_id: gene_ids
+
 layer_counts: counts
 
 dataset_name: "Human Lung Atlas"
@@ -27,15 +29,17 @@ normalization_methods:
   - sqrt_cp10k
   - l1_sqrt
 
-output_dataset: dataset.h5ad
+output_dataset: $id/dataset.h5ad
 
-output_raw: dataset_raw.h5ad
+output_meta: $id/dataset_metadata.yaml
 
-output_normalized: dataset_normalized.h5ad
+output_raw: force_null
 
-output_pca: dataset_pca.h5ad
+output_normalized: force_null
 
-output_hvg: dataset_hvg.h5ad
+output_pca: force_null
 
-output_knn: dataset_knn.h5ad
+output_hvg: force_null
+
+output_knn: force_null
 

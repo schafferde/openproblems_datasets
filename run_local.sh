@@ -13,13 +13,15 @@ echo "  Make sure to run 'scripts/project/build_all_docker_containers.sh'!"
 
 # generate a unique id
 RUN_ID="datarun_$(date +%Y-%m-%d_%H-%M-%S)"
-publish_dir="resources/datasets/${RUN_ID}"
+publish_dir="resources/datasets/${RUN_ID}/"
 
 # write the parameters to file
+#Unfortunately, currently we can only specify one normalization method per config
+#So we need to prodivce each (dataset, normalization) pair as its own input config
 cat > /tmp/params.yaml << HERE
-input_states: /local/dschaffe/openproblems_datasets/celegans_config.yaml
+input_states: /local/dschaffe/openproblems_datasets/*_config.yaml
 output_state: "state.yaml"
-publish_dir: "$publish_dir"
+publish_dir: '$publish_dir'
 HERE
 
 nextflow run . \
