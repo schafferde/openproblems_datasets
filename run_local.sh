@@ -31,3 +31,9 @@ nextflow run . \
   -c labels_copy.config \
   -params-file /tmp/params.yaml \
   -resume
+
+#Directly setting output_state to be $id/state.yaml fails for various errors
+#So, we use the nextflow config to put the state.yamls in the correct directories
+#and then edit out the unneeded paths
+
+find "$publish_dir" -name "state.yaml" -exec sed -i "s/!file '.*\/\([^/]*\)'/!file '\1'/g" {} +
