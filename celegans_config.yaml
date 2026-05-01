@@ -1,8 +1,8 @@
 id: celegans_embryo
 
-file_name: "Celegans_embryo_dataset.h5ad"
+file_name: "Celegans_embryo_dataset_relabel.h5ad"
 
-obs_cell_type: "cell.type"
+obs_cell_type: new_cell_type
 
 obs_batch: batch
 
@@ -18,7 +18,7 @@ dataset_reference: packer2019lineage
 
 dataset_summary: "profiling the transcriptomes of 86,024 single embryonic cells from C. elegans"
 
-dataset_description: "C elegans dataset produceed by Packer et al (2019), with poor quality and unlabeled cells removed"
+dataset_description: "C elegans dataset produceed by Packer et al (2019), with poor quality cells removed and terminal cells relabeled."
 
 dataset_organism: caenorhabditis_elegans
 

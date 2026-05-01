@@ -1,0 +1,43 @@
+id: tabula_muris
+
+file_name: "Muris_merged_dataset_trim_ensid.h5ad"
+
+obs_cell_type: cell_ontology_class
+
+obs_batch: batch
+
+obs_tissue: tissue
+
+var_feature_id: gene_ids
+
+dataset_name: "Tabula Muris"
+
+dataset_url: "https://figshare.com/projects/Tabula_Muris_Transcriptomic_characterization_of_20_organs_and_tissues_from_Mus_musculus_at_single_cell_resolution/27733"
+
+dataset_reference: consortium2018muris
+
+dataset_summary: "single-cell transcriptomic data from the model organism Mus musculus that comprises more than 100,000 cells from 20 organs and tissues"
+
+dataset_description: "Mouse pan-tissue atlas dataset, with FACS and droplet merged, with batch=individualXtechnology, and small batches trimmed"
+
+dataset_organism: mus_musculus
+
+normalization_methods:
+  - log_cp10k
+  - sqrt_cp10k
+  - l1_sqrt
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

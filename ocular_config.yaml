@@ -1,0 +1,43 @@
+id: ocular_atlas
+
+file_name: "Ocular_dataset_ensid.h5ad"
+
+obs_cell_type: class
+
+obs_batch: donor_id
+
+obs_tissue: organ__ontology_label
+
+var_feature_id: gene_ids
+
+dataset_name: "Ocular Atlas"
+
+dataset_url: "https://singlecell.broadinstitute.org/single_cell/study/SCP2310/transcriptomic-analysis-of-the-ocular-posterior-segment-completes-a-cell-atlas-of-the-human-eye-ocular-atlas"
+
+dataset_reference: monavarfeshani2023eye
+
+dataset_summary: "An ocular atlas generated from three datasets, anterior segment, posterior segment, and peripheral/macular retina."
+
+dataset_description: "Each type from individual dataset was down sampled to 2000 nuclei before pooling and re-normalization. Using the grouped class cell-type labels."
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+  - sqrt_cp10k
+  - l1_sqrt
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+
