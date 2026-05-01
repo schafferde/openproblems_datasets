@@ -1,0 +1,153 @@
+Cell type from Table S2,Tissue from Table S2,Reported # of cells,Observed Coarse Label?,Assigned new label,Remark
+Body_wall_muscle,Muscle and mesoderm,1120,Y,Body_wall_muscle,
+BWM_head_row_1,Muscle and mesoderm,2384,N,Body_wall_muscle,
+BWM_head_row_2,Muscle and mesoderm,2106,N,Body_wall_muscle,
+BWM_anterior,Muscle and mesoderm,5191,N,Body_wall_muscle,
+BWM_posterior,Muscle and mesoderm,5737,N,Body_wall_muscle,
+BWM_far_posterior,Muscle and mesoderm,982,N,Body_wall_muscle,
+Coelomocyte,Muscle and mesoderm,787,Y,Coelomocyte,
+GLR,Muscle and mesoderm,768,Y,GLR,
+hmc_and_homolog,Muscle and mesoderm,122,Y,hmc_and_homolog,
+hmc,Muscle and mesoderm,189,Y,hmc_and_homolog,Mapped to hmc_and_homolog despite occuring as its own coarse label
+hmc_homolog,Muscle and mesoderm,155,Y,hmc_and_homolog,Mapped to hmc_and_homolog despite occuring as its own coarse label
+M_cell,Muscle and mesoderm,315,Y,M_cell,
+Intestinal_and_rectal_muscle,Muscle and mesoderm,88,Y,Intestinal_and_rectal_muscle,
+mu_int_mu_anal,Muscle and mesoderm,363,N,Intestinal_and_rectal_muscle,
+mu_sph,Muscle and mesoderm,117,N,Intestinal_and_rectal_muscle,
+Z1_Z4,Muscle and mesoderm,372,Y,Z1_Z4,
+g1A_g1P,Pharynx,142,N,Pharyngeal_gland,There is also a late-embryonic g1A_parent subtype assigned the Pharyngeal_gland coarse label
+g1A,Pharynx,178,N,Pharyngeal_gland,
+g1P,Pharynx,123,N,Pharyngeal_gland,
+g2,Pharynx,216,N,Pharyngeal_gland,
+Pharyngeal_marginal_cell,Pharynx,179,Y,Pharyngeal_marginal_cell,
+mc1,Pharynx,168,N,Pharyngeal_marginal_cell,
+mc2,Pharynx,190,N,Pharyngeal_marginal_cell,
+mc3,Pharynx,374,N,Pharyngeal_marginal_cell,
+Pharyngeal_intestinal_valve,Pharynx,496,Y,Pharyngeal_intestinal_valve,
+pm1_pm2,Pharynx,197,N,Pharyngeal_muscle,
+pm3_pm4_pm5,Pharynx,1849,N,Pharyngeal_muscle,
+pm6,Pharynx,144,N,Pharyngeal_muscle,
+pm7,Pharynx,270,N,Pharyngeal_muscle,
+pm8,Pharynx,32,N,Pharyngeal_muscle,
+Pharyngeal_muscle_incomplete_dissociation,Pharynx,70,N,Pharyngeal_muscle,
+Anterior_arcade_cell,Pharynx,151,N,Arcade_cell,
+Posterior_arcade_cell,Pharynx,209,N,Arcade_cell,
+Arcade_cell_anterior_and_posterior,Pharynx,45,N,Arcade_cell,
+hyp1_hyp2,Pharynx,346,N,Hypodermis,"Matches existing coarse label, despite other tissue"
+Pharyngeal_neuron,Pharynx,1225,Y,Pharyngeal_neuron,There are also various late-embryonic cells assigned to Pharyngeal_neuron
+MC,Pharynx,58,N,Pharyngeal_neuron,
+Intestine,Intestine,777,Y,Intestine,
+Intestine_anterior,Intestine,301,N,Intestine,
+Intestine_far_posterior,Intestine,160,N,Intestine,
+Intestine_middle_and_posterior,Intestine,494,N,Intestine,
+Hypodermis,Hypodermis and seam cells,2296,Y,Hypodermis,
+hyp4_hyp5_hyp6,Hypodermis and seam cells,687,N,Hypodermis,
+hyp7_AB_lineage,Hypodermis and seam cells,1057,N,Hypodermis,
+hyp7_C_lineage,Hypodermis and seam cells,1774,N,Hypodermis,
+Tail_hypodermis,Hypodermis and seam cells,387,N,Hypodermis,
+P_cell,Hypodermis and seam cells,1037,N,Hypodermis,
+Seam_cell,Hypodermis and seam cells,2770,Y,Seam_cell,
+G2_and_W_blasts,Hypodermis and seam cells,72,,,
+Glia,Glia and excretory cells,2084,Y,,
+AMsh,Glia and excretory cells,392,N,Glia,
+ADEsh,Glia and excretory cells,71,N,Glia,
+CEPsh,Glia and excretory cells,127,N,Glia,
+ILsh_OLLsh_OLQsh,Glia and excretory cells,190,N,Glia,
+AMso,Glia and excretory cells,224,N,Glia,"Also AMso_parent, but has NA coarse label"
+CEPso,Glia and excretory cells,288,N,Glia,
+ILso,Glia and excretory cells,174,N,Glia,
+hyp3,Glia and excretory cells,115,N,Hypodermis,"Matches existing coarse label, despite other tissue"
+Excretory_cell,Glia and excretory cells,215,Y,Excretory_cell,Also Excretory_cell_parent
+Excretory_duct_and_pore,Glia and excretory cells,91,Y,Excretory_duct_and_pore,
+Excretory_gland,Glia and excretory cells,204,Y,Excretory_gland,
+XXX,Glia and excretory cells,25,Y,,"Described as ""very tentative annotation"""
+Possibly_hyp1V,Glia and excretory cells,56,N,,"Described as ""very tentative annotation"", not in data"
+Possibly_ant_arc_V,Glia and excretory cells,29,N,,"Described as ""very tentative annotation"", not in data"
+hyp1V_and_ant_arc_V,Glia and excretory cells,112,Y,hyp1V_and_ant_arc_V,Also Parent_of_hyp1V_and_ant_arc_V coarse type
+Germline,"Early embryo, germline, and rectum",515,Y,Germline,
+ADE,Ciliated neurons,90,N,Ciliated_non_amphid_neuron,Also various projenitors within the Ciliated_non_amphid_neuron coarse type
+ADF,Ciliated neurons,170,N,Ciliated_amphid_neuron,Also various projenitors within the Ciliated_amphid_neuron coarse type
+ADF_AWB,Ciliated neurons,102,N,Ciliated_amphid_neuron,
+ADL,Ciliated neurons,477,N,Ciliated_amphid_neuron,
+AFD,Ciliated neurons,326,N,Ciliated_amphid_neuron,
+ASE,Ciliated neurons,282,N,Ciliated_amphid_neuron,
+ASG,Ciliated neurons,173,N,Ciliated_amphid_neuron,
+ASG_AWA,Ciliated neurons,99,N,Ciliated_amphid_neuron,
+ASH,Ciliated neurons,345,N,Ciliated_amphid_neuron,
+ASI,Ciliated neurons,212,N,Ciliated_amphid_neuron,
+ASJ,Ciliated neurons,320,N,Ciliated_amphid_neuron,
+ASK,Ciliated neurons,233,N,Ciliated_amphid_neuron,
+AWA,Ciliated neurons,236,N,Ciliated_amphid_neuron,
+AWB,Ciliated neurons,212,N,Ciliated_amphid_neuron,
+AWC,Ciliated neurons,309,N,Ciliated_amphid_neuron,
+BAG,Ciliated neurons,265,N,Ciliated_non_amphid_neuron,
+CEP,Ciliated neurons,152,N,Ciliated_non_amphid_neuron,
+IL1,Ciliated neurons,164,N,Ciliated_non_amphid_neuron,
+IL2,Ciliated neurons,391,N,Ciliated_non_amphid_neuron,
+OLL,Ciliated neurons,108,N,Ciliated_non_amphid_neuron,
+OLQ,Ciliated neurons,254,N,Ciliated_non_amphid_neuron,
+PHB_and_possibly_PHA,Ciliated neurons,83,N,,Unclear - unspecified ciliated neuron?
+URX,Ciliated neurons,230,N,Ciliated_non_amphid_neuron,
+AIA,Non-ciliated neurons,56,N,Non_ciliated_neuron,"No existing coarse label for most NCNs, so one was created"
+AIB,Non-ciliated neurons,126,N,Non_ciliated_neuron,
+AIM,Non-ciliated neurons,94,N,Non_ciliated_neuron,
+AIN,Non-ciliated neurons,64,N,Non_ciliated_neuron,Also AIN_parent
+AIY,Non-ciliated neurons,149,N,Non_ciliated_neuron,
+AIZ,Non-ciliated neurons,39,N,Non_ciliated_neuron,
+ALA,Non-ciliated neurons,122,N,Non_ciliated_neuron,
+ALM_PLM,Non-ciliated neurons,76,N,Non_ciliated_neuron,
+ALM_BDU,Non-ciliated neurons,90,N,Non_ciliated_neuron,
+ALN,Non-ciliated neurons,28,N,Non_ciliated_neuron,
+AUA,"Non-ciliated neurons and
+Ciliated neurons",154,N,,Skip due to ambiguous description
+AVA,Non-ciliated neurons,248,N,Non_ciliated_neuron,
+AVB,Non-ciliated neurons,187,N,Non_ciliated_neuron,
+AVD,Non-ciliated neurons,99,N,Non_ciliated_neuron,
+AVE,Non-ciliated neurons,177,N,Non_ciliated_neuron,
+AVG,Non-ciliated neurons,125,N,Non_ciliated_neuron,
+AVH,Non-ciliated neurons,94,N,Non_ciliated_neuron,Also AVH_parent
+AVJ,Non-ciliated neurons,53,N,Non_ciliated_neuron,
+AVK,Non-ciliated neurons,336,N,Non_ciliated_neuron,
+Parent_of_exc_gland_AVK,-,0,Y,"Added, this progenitor coarse label sometimes occurs with RIM_parent as the fine label and other times with NA"
+AVL,Non-ciliated neurons,114,N,Non_ciliated_neuron,
+CAN,Non-ciliated neurons,332,N,Non_ciliated_neuron,
+DA,Non-ciliated neurons,529,N,Non_ciliated_neuron,"One DA-labeled cell is labeled as Pharyngeal_neuron, which we swap to NCN"
+DA_DB,Non-ciliated neurons,173,N,Non_ciliated_neuron,
+DB,Non-ciliated neurons,491,N,Non_ciliated_neuron,
+Parent_of_exc_duct_pore_DB_1_3,-,0,Y,Non_ciliated_neuron,"Added, this coarse label sometimes occurs with DB as the fine label and other times with NA"
+DD,Non-ciliated neurons,326,N,Non_ciliated_neuron,
+DVA,Non-ciliated neurons,99,N,Non_ciliated_neuron,
+DVC,Non-ciliated neurons,101,N,Non_ciliated_neuron,Also DVC_parent
+FLP,Non-ciliated neurons,19,N,Non_ciliated_neuron,
+I5,Non-ciliated neurons,83,N,Non_ciliated_neuron,
+PLM,Non-ciliated neurons,16,N,Non_ciliated_neuron,
+PVP,Non-ciliated neurons,116,N,Non_ciliated_neuron,
+PVQ_and_possibly_PVC,Non-ciliated neurons,48,N,Non_ciliated_neuron,
+PVR,Non-ciliated neurons,14,N,Non_ciliated_neuron,
+PVT,Non-ciliated neurons,54,N,Non_ciliated_neuron,
+RIA,Non-ciliated neurons,260,N,Non_ciliated_neuron,Also RIA_parent
+RIB,Non-ciliated neurons,86,N,Non_ciliated_neuron,
+RIC,Non-ciliated neurons,69,N,Non_ciliated_neuron,Also RIC_parent
+RID,Non-ciliated neurons,55,N,Non_ciliated_neuron,Also RID_parent
+RIH,Non-ciliated neurons,38,N,Non_ciliated_neuron,
+RIM,Non-ciliated neurons,157,N,Non_ciliated_neuron,Also RIM_parent
+RIS,Non-ciliated neurons,127,N,Non_ciliated_neuron,
+RIV,Non-ciliated neurons,198,N,Non_ciliated_neuron,
+RMD,Non-ciliated neurons,199,N,Non_ciliated_neuron,
+RME,Non-ciliated neurons,335,N,Non_ciliated_neuron,Also RME_LR_parent - would exclude
+RMED,Non-ciliated neurons,25,N,Non_ciliated_neuron,
+SIA,Non-ciliated neurons,200,N,Non_ciliated_neuron,
+SIB,Non-ciliated neurons,124,N,Non_ciliated_neuron,
+SMB,Non-ciliated neurons,177,N,Non_ciliated_neuron,
+SMD,Non-ciliated neurons,303,N,Non_ciliated_neuron,
+URB_and_possibly_URA,Non-ciliated neurons,93,N,Non_ciliated_neuron,Also URB_parent
+T,Time 350min hypodermis + glia,141,Y,,"Excluded, because these are undifferentiated between hypodermis and glia"
+Excretory_duct,Duct and pore,26,N,Excretory_duct_and_pore,
+Excretory_pore_G1,Duct and pore,19,N,Excretory_duct_and_pore,
+B,Rectal cells,35,N,Rectal_cell,
+F_U,Rectal cells,47,N,Rectal_cell,
+K_Kprime,Rectal cells,39,N,Rectal_cell,
+Y,Rectal cells,43,N,Rectal_cell,
+B_F_K_Kp_U_Y,Rectal cells,166,N,Rectal_cell,
+rect_D,Rectal cells,20,N,Rectal_gland,
+Rectal_gland,Rectal cells,249,Y,Rectal_gland,
