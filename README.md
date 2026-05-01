@@ -1,3 +1,40 @@
+# Data Processing for Batch Integration with BatchRefiner
+## Description
+
+This branch of this fork of `openprobems/datasets` contains code and materials used to add three additional benchmarking datasets to the Openproblems `task_batch_integration` pipeline for use with BatchRefiner.
+
+Standalone package - [BatchRefiner](https://github.com/schafferde/BatchRefiner)
+
+Main reproducibility repository - [https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility](https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility)
+
+Schäffer, D. E, Kang, H., Aksu, E. D., Edelman, D., Berger, B.: Significantly enhanced batch integration of scRNA-seq embeddings. *In preparation*
+
+## Data
+``new_datasets`` contains four scripts and one text file used to parse datasets into `.h5ad` format from raw counts:
+- The script `parse_ocular.py` parses the Ocular Atlas dataset. Raw data consist of one `.mtx` file and two `.tsv` files downloaded from [Single Cell Portal accession SCP2310](https://singlecell.broadinstitute.org/single_cell/study/SCP2310/) (account required for download). 
+- The script `parse_muris.py` parses the Tabula Muris dataset. Raw data consist of two `.zip` archives and four `.csv` files downloaded from Figshare, [dataset 5968960 for droplet](https://doi.org/10.6084/m9.figshare.5968960) and [dataset 5829687 for FACS](https://doi.org/10.6084/m9.figshare.5829687). Each method is associated with one archive and two metadata files. The archives must first be extracted. 
+- The script `parse_celegans.py` parses the C. elegans Embryo dataset. Raw data consist of one `.txt` matrix file and two `.csv` files downloaded from [NCBI GEO accession GSE126954](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126954).
+- The file `celegans_cell_type_map.csv` contains a human- and machine-readable mapping of cell type labels for the C. elegans dataset into a new, consistent form for differentiated cells. The mapping logic is described in a comment in `parse_celegans.py`. These labels were based on the notes in the supplementary information of the original study.
+- The file `add_emsembl_robust.py` was used to add Ensembl IDs to many gene names in the Ocular Atlas and Tabula Muris datasets. Ensembl IDs are expected by the OpenProblems pipeline because a few downstream methods expect them. However, none of the methods we used do so, so use of this script is not strictly necessary. 
+### Dataset References
+Monavarfeshani, A., Yan, W., Pappas, C., Odenigbo, K. A., He, Z., Segrè, A. V., van Zyl, T., Hageman, G.S., Sanes, J. R.: Transcriptomic analysis of the ocular posterior segment completes a cell atlas of the human eye. *Proc. Natl. Acad. Sci. U. S. A.* **120**(34), e2306153120 (Aug 2023)
+
+Packer, J. S., Zhu, Q., Huynh, C., Sivaramakrishnan, P., Preston, E., Dueck, H., Stefanik, D., Tan, K., Trapnell, C., Kim, J., Waterston, R. H., Murray, J. I.: A lineage-resolved molecular atlas of C. elegans embryogenesis at single-cell resolution. *Science* **365**(6459), eaax1971 (Sep 2019)
+
+Tabula Muris Consortium: Single-cell transcriptomics of 20 mouse organs creates a Tabula Muris. *Nature* **562**(7727), 367–372 (Oct 2018)
+
+
+##  Modifications for OpenProblems Pipeline
+- We added a new proprocessing workflow and corresponding data loader to process local scRNA-seq datasets in `h5ad` format into OpenProblems common format. 
+  - These can be found at `src/workflows/scrnaseq/process_local_h5ad/` and `src/loaders/scrnaseq/local_h5ad`
+  - Because of limitations in read permissions when running via docker, they require each `h5ad` file to be manually copied into the loader's working directory when running. 
+- The configuration files `celegans_config.yaml`, `muris_config.yaml`, and `ocular_config.yaml` contain the parameters used to process our three datasets through this pipeline.
+- The script `./run_local.sh` runs the data processing pipeline on the three datasets, subject to them being copied to thr working directory of each loader process as mentioned above.
+  - The script `./build_all_docker_containers.sh` builds just the docker containers needed for processing local scRNA-seq datasets.
+
+---
+## The original README from the OpenProblems repository follows below.
+
 # openproblems datasets
 
 This repository contains dataset loaders and processing workflows.
