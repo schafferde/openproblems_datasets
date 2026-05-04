@@ -7,7 +7,7 @@ Standalone package - [BatchRefiner](https://github.com/schafferde/BatchRefiner)
 
 Main reproducibility repository - [https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility](https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility)
 
-Schäffer, D. E, Kang, H., Aksu, E. D., Edelman, D., Berger, B.: Significantly enhanced batch integration of scRNA-seq embeddings. *In preparation*
+Schäffer, D. E, Kang, H., Aksu, E. D., Edelman, D., Berger, B.: Ensemble learning significantly improves batch integration of scRNA-seq cell embeddings. *In preparation*
 
 ## Data
 ``new_datasets`` contains four scripts and one text file used to parse datasets into `.h5ad` format from raw counts:
