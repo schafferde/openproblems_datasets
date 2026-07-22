@@ -62,19 +62,26 @@ if par["layer_counts"] and par["layer_counts"] in adata.layers:
     adata.X = adata.layers[par["layer_counts"]]
     del adata.layers[par["layer_counts"]]
 
-if par["sparse"] and not scipy.sparse.issparse(adata.X):
-    print("Make counts sparse", flush=True)
-    adata.X = scipy.sparse.csr_matrix(adata.X)
+#Empty X can arrise from datasets that contain only pre-processed obsm embedding fields
+is_empty = (adata.X is None) or (0 in adata.X.shape)
 
-print("Removing empty genes", flush=True)
-sc.pp.filter_genes(adata, min_cells=1)
+if is_empty:
+    print("This AnnData does not contain any expression values")
+    print(f"However, it contains the following obsm fields:{adata.obsm_keys()}")
+else:
+    if par["sparse"] and not scipy.sparse.issparse(adata.X):
+        print("Make counts sparse", flush=True)
+        adata.X = scipy.sparse.csr_matrix(adata.X)
 
-print("Removing empty cells", flush=True)
-sc.pp.filter_cells(adata, min_counts=2)
+    print("Removing empty genes", flush=True)
+    sc.pp.filter_genes(adata, min_cells=1)
 
-print("Moving .X to .layers['counts']", flush=True)
-adata.layers["counts"] = adata.X
-del adata.X
+    print("Removing empty cells", flush=True)
+    sc.pp.filter_cells(adata, min_counts=2)
+
+    print("Moving .X to .layers['counts']", flush=True)
+    adata.layers["counts"] = adata.X
+    del adata.X
 
 print("Add metadata to uns", flush=True)
 metadata_fields = [
