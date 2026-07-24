@@ -1,6 +1,6 @@
 
 import scanpy as sc
-
+import numpy as np
 ### VIASH START
 par = {
   'input': 'resources_test/common/pancreas/dataset.h5ad',
@@ -36,6 +36,9 @@ if not is_empty:
         "variance": variance, 
         "variance_ratio": variance_ratio
     }
+else:
+    nc = 1 if par["num_components"] is None else par["num_components"]
+    adata.obsm[par["obsm_embedding"]] = np.zeros((adata.shape[0],nc))
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])

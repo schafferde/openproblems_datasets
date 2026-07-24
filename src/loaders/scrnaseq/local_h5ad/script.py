@@ -116,6 +116,7 @@ if not is_empty:
             adata.var["feature_id"] = adata.var[par["var_feature_id"]]
             del adata.var[par["var_feature_id"]]
         else:
+            adata.var["feature_id"] = ""
             print(f"Warning: key '{par['var_feature_id']}' could not be found in adata.var.", flush=True)
 else:
     adata.var["feature_id"] = None

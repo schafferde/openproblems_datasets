@@ -33,6 +33,9 @@ if not is_empty:
     print(">> Storing output", flush=True)
     adata.var[par["var_hvg"]] = out['highly_variable'].values
     adata.var[par["var_hvg_score"]] = out['dispersions_norm'].values
+else:
+    adata.var[par["var_hvg"]] = 0
+    adata.var[par["var_hvg_score"]] = 0
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])

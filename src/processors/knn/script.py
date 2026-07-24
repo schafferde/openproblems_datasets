@@ -1,5 +1,6 @@
 
 import scanpy as sc
+import numpy as np
 
 ### VIASH START
 par = {
@@ -24,6 +25,9 @@ if not is_empty:
         key_added=par['key_added'],
         n_neighbors=par['num_neighbors']
     )
+else:
+    adata.obsp[par['key_added']+"_distances"] = np.zeros((adata.shape[0], adata.shape[0]))
+    adata.obsp[par['key_added']+"_connectivities"] = np.zeros((adata.shape[0], adata.shape[0]))
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])
