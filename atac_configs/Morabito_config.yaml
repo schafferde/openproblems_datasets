@@ -1,0 +1,43 @@
+id: morabito_atac
+
+file_name: "Morabito.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: skip
+
+dataset_name: "Morabito Brain"
+
+dataset_url: "https://www.nature.com/articles/s41588-021-00894-z"
+
+dataset_reference: morabito2021
+
+dataset_summary: "Single-nucleus chromatin accessibility and transcriptomic characterization of Alzheimer's disease"
+
+dataset_description: "Using provided cell type labels, and sample ID as batch"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

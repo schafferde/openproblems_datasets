@@ -1,0 +1,43 @@
+id: granja_atac
+
+file_name: "Granja.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: skip
+
+dataset_name: "Granja Blood"
+
+dataset_url: "https://github.com/GreenleafLab/MPAL-Single-Cell-2019"
+
+dataset_reference: granja2019
+
+dataset_summary: "Single-cell multiomic analysis identifies regulatory programs in mixed-phenotype acute leukemia"
+
+dataset_description: "Using mapping of cluster labels to cell types (exlcuding unknown cells) from supplement, and Group as batch"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

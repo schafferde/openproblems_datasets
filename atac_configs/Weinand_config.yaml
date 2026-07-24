@@ -1,0 +1,43 @@
+id: weinand_atac
+
+file_name: "Weinand.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: index
+
+dataset_name: "Weinand Synovial"
+
+dataset_url: "https://www.biorxiv.org/content/10.1101/2025.04.02.646871v1"
+
+dataset_reference: weinand2024
+
+dataset_summary: "The chromatin landscape of pathogenic transcriptional cell states in rheumatoid arthritis"
+
+dataset_description: "Using provided cell type and sample (batch) labels, as reported in 2025 preprint"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

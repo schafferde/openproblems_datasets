@@ -1,0 +1,43 @@
+id: cheong_atac
+
+file_name: "Cheong.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: index
+
+dataset_name: "Cheong Immune"
+
+dataset_url: "https://www.sciencedirect.com/science/article/pii/S0092867423007961"
+
+dataset_reference: cheong2023
+
+dataset_summary: "Epigenetic memory of coronavirus infection in innate immune cells and their progenitors"
+
+dataset_description: "Using provided marker annotations as cell type, and sample as batch"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

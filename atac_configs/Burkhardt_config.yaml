@@ -1,0 +1,43 @@
+id: burkhardt_atac
+
+file_name: "Burkhardt.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: gene_id
+
+var_feature_name: index
+
+dataset_name: "Burkhardt Bone Marrow"
+
+dataset_url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE194122"
+
+dataset_reference: burkhardt2021
+
+dataset_summary: "Single-cell multiomics data collected from bone marrow mononuclear cells of 12 healthy human donors"
+
+dataset_description: "Using provided cell type and batch labels"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+
