@@ -67,6 +67,7 @@ is_empty = (adata.X is None) or (0 in adata.X.shape)
 
 if is_empty:
     print("This AnnData does not contain any expression values")
+    adata.layers["counts"] = adata.X
     print(f"However, it contains the following obsm fields:{adata.obsm_keys()}")
 else:
     if par["sparse"] and not scipy.sparse.issparse(adata.X):
@@ -96,26 +97,29 @@ uns_metadata = {
 adata.uns.update(uns_metadata)
 
 print("Setting .var['feature_name']", flush=True)
-
-if par["var_feature_name"] == "index":
-    adata.var["feature_name"] = adata.var.index
-else:
-    if par["var_feature_name"] in adata.var:
-        adata.var["feature_name"] = adata.var[par["var_feature_name"]]
-        del adata.var[par["var_feature_name"]]
+if not is_empty:
+    if par["var_feature_name"] == "index":
+        adata.var["feature_name"] = adata.var.index
     else:
-        print(f"Warning: key '{par['var_feature_name']}' could not be found in adata.var.", flush=True)
+        if par["var_feature_name"] in adata.var:
+            adata.var["feature_name"] = adata.var[par["var_feature_name"]]
+            del adata.var[par["var_feature_name"]]
+        else:
+            print(f"Warning: key '{par['var_feature_name']}' could not be found in adata.var.", flush=True)
 
-print("Setting .var['feature_id']", flush=True)
+    print("Setting .var['feature_id']", flush=True)
 
-if par["var_feature_id"] == "index":
-    adata.var["feature_id"] = adata.var.index
-else:
-    if par["var_feature_id"] in adata.var:
-        adata.var["feature_id"] = adata.var[par["var_feature_id"]]
-        del adata.var[par["var_feature_id"]]
+    if par["var_feature_id"] == "index":
+        adata.var["feature_id"] = adata.var.index
     else:
-        print(f"Warning: key '{par['var_feature_id']}' could not be found in adata.var.", flush=True)
+        if par["var_feature_id"] in adata.var:
+            adata.var["feature_id"] = adata.var[par["var_feature_id"]]
+            del adata.var[par["var_feature_id"]]
+        else:
+            print(f"Warning: key '{par['var_feature_id']}' could not be found in adata.var.", flush=True)
+else:
+    adata.var["feature_id"] = None
+    adata.var["feature_name"] = None
 
 print("Writing adata to file", flush=True)
 adata.write_h5ad(par["output"], compression=par["output_compression"])

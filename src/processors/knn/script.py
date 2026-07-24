@@ -14,13 +14,16 @@ par = {
 print(">> Load data", flush=True)
 adata = sc.read(par['input'])
 
-print(">> Run kNN", flush=True)
-sc.pp.neighbors(
-    adata,
-    use_rep='X_pca',
-    key_added=par['key_added'],
-    n_neighbors=par['num_neighbors']
-)
+is_empty = (par['input_layer'] and par['input_layer'] not in adata.layers) or (0 in adata.shape)
+
+if not is_empty:
+    print(">> Run kNN", flush=True)
+    sc.pp.neighbors(
+        adata,
+        use_rep='X_pca',
+        key_added=par['key_added'],
+        n_neighbors=par['num_neighbors']
+    )
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])

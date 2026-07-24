@@ -19,7 +19,7 @@ publish_dir="resources/datasets/${RUN_ID}/"
 #Unfortunately, currently we can only specify one normalization method per config
 #So we need to prodivce each (dataset, normalization) pair as its own input config
 cat > /tmp/params.yaml << HERE
-input_states: /local/dschaffe/openproblems_datasets/*_config.yaml
+input_states: /local/dschaffe/openproblems_datasets/atac_configs/*_config.yaml
 output_state: "state.yaml"
 publish_dir: '$publish_dir'
 HERE

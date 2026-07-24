@@ -16,20 +16,23 @@ print(">> Load data", flush=True)
 adata = sc.read_h5ad(par['input'])
 
 print(">> Look for layer", flush=True)
-layer = adata.X if not par['input_layer'] else adata.layers[par['input_layer']]
+is_empty = (par['input_layer'] and par['input_layer'] not in adata.layers) or (0 in adata.shape)
 
-print(">> Run HVG", flush=True)
-out = sc.pp.highly_variable_genes(
-  adata,
-  layer=par["input_layer"],
-  n_top_genes=par["num_features"],
-  flavor='cell_ranger',
-  inplace=False
-)
+if not is_empty:
+    layer = adata.X if not par['input_layer'] else adata.layers[par['input_layer']]
 
-print(">> Storing output", flush=True)
-adata.var[par["var_hvg"]] = out['highly_variable'].values
-adata.var[par["var_hvg_score"]] = out['dispersions_norm'].values
+    print(">> Run HVG", flush=True)
+    out = sc.pp.highly_variable_genes(
+        adata,
+        layer=par["input_layer"],
+        n_top_genes=par["num_features"],
+        flavor='cell_ranger',
+        inplace=False
+    )
+
+    print(">> Storing output", flush=True)
+    adata.var[par["var_hvg"]] = out['highly_variable'].values
+    adata.var[par["var_hvg_score"]] = out['dispersions_norm'].values
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])
