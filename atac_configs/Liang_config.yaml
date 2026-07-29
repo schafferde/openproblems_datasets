@@ -1,0 +1,43 @@
+id: liang_atac
+
+file_name: "Liang.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: skip
+
+dataset_name: "Liang Retina"
+
+dataset_url: "https://cells.ucsc.edu/?ds=retina-atac"
+
+dataset_reference: liang2023
+
+dataset_summary: "A multi-omics atlas of the human retina at single-cell resolution"
+
+dataset_description: "Using provided cell type labels, and patient as batch"
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+

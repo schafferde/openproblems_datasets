@@ -1,0 +1,43 @@
+id: domcke_atac
+
+file_name: "Domcke_gs174k.h5ad"
+
+obs_cell_type: label
+
+obs_batch: sample
+
+obs_tissue: skip
+
+var_feature_id: skip
+
+var_feature_name: skip
+
+dataset_name: "Domcke Fetal"
+
+dataset_url: "https://www.science.org/doi/10.1126/science.aba7612"
+
+dataset_reference: domcke2021
+
+dataset_summary: "A human cell atlas of fetal chromatin accessibility"
+
+dataset_description: "Using product of patient and batch as batch label, and cell types based on provided label, with Unknown removed, ? marks trimmed, and three synonyms merged. 25% GeoSketch based on gene accessibility scores" 
+
+dataset_organism: homo_sapiens
+
+normalization_methods:
+  - log_cp10k
+
+output_dataset: $id/dataset.h5ad
+
+output_meta: $id/dataset_metadata.yaml
+
+output_raw: force_null
+
+output_normalized: force_null
+
+output_pca: force_null
+
+output_hvg: force_null
+
+output_knn: force_null
+
