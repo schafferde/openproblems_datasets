@@ -1,5 +1,6 @@
 
 import scanpy as sc
+from scipy import sparse
 import numpy as np
 
 ### VIASH START
@@ -26,8 +27,8 @@ if not is_empty:
         n_neighbors=par['num_neighbors']
     )
 else:
-    adata.obsp[par['key_added']+"_distances"] = np.zeros((adata.shape[0], adata.shape[0]))
-    adata.obsp[par['key_added']+"_connectivities"] = np.zeros((adata.shape[0], adata.shape[0]))
+    adata.obsp[par['key_added']+"_distances"] = sparse.csr_matrix((adata.shape[0], adata.shape[0]),dtype=np.float32)
+    adata.obsp[par['key_added']+"_connectivities"] = sparse.csr_matrix((adata.shape[0], adata.shape[0]),dtype=np.float32)
 
 print(">> Writing data", flush=True)
 adata.write_h5ad(par['output'], compression=par["output_compression"])
