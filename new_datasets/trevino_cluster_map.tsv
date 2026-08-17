@@ -1,0 +1,23 @@
+Cluster ID	Name	Name (long)	Color	Order	N cells
+c0	GluN6	Glutamatergic Neuron 6	#589400	11	4041
+c1	GluN4	Glutamatergic Neuron 4	#008044	9	3006
+c2	GluN7	Glutamatergic Neuron 7	#005c3b	12	2900
+c3	IN2	Interneuron 2	#d95698	15	2856
+c4	IN4	Interneuron 4	#900046	18	2569
+c5	GluN9	Glutamatergic Neuron 9	#836e00	14	2123
+c6	GluN2	Glutamatergic Neuron 2	#2c86ef	7	1911
+c7	GluN3	Glutamatergic Neuron 3	#059876	10	1909
+c8	nIPC	neuronal Intermedate Progenitor Cell	#7e21d4	6	1896
+c9	Late RG	Late Radial Glia	#b12900	3	1847
+c10	oIPC	Oligodendrocyte intermediate progenitor cell	#ce694c	4	1035
+c11	Early RG	Early Radial Glia	#842039	1	1018
+c12	IN3	Interneuron 3	#e30059	16	835
+c13	GluN5	Glutamatergic Neuron 5	#006281	8	666
+c14	GluN8	Glutamatergic Neuron 8	#0a30c6	13	556
+c15	OPC/Oligo	Oligodendrocyte Progenitor Cell/Oligodendrocyte	#af7b3c	5	535
+c16	IN5	Interneuron 5	#ec496d	19	445
+c17	Peric.	Pericyte	#df00cf	21	362
+c18	GluN1	Glutamatergic Neuron 1	#82849b	2	229
+c19	MG	Microglia	#256e00	20	221
+c20	IN1	Interneuron 1	#b8005c	17	174
+c21	EC	Endothelial Cell	#9a00a8	22	170
