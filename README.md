@@ -49,7 +49,7 @@ Kanemaru, K., Cranley, J., Muraro, D.,*et al*: Spatially resolved multiomics of 
 
 Liang, Q., Cheng, X., Wang, J., *et al*: A multi-omics atlas of the human retina at single-cell resolution. *Cell Genom.* **3**(6), 100298 (Jun 2023)
 
-Morabito, S., Miyoshi, E., Michael, N., *et al*: Single-nucleus chromatin accessibility and transcriptomic characterization of alzheimer’s disease. *Nat. Genet.* **53**(8), 1143-1155 (Aug 2021)
+Morabito, S., Miyoshi, E., Michael, N., *et al*: Single-nucleus chromatin accessibility and transcriptomic characterization of Alzheimer’s disease. *Nat. Genet.* **53**(8), 1143-1155 (Aug 2021)
 
 Trevino, A.E., Müller, F., Andersen, J., *et al*: Chromatin and gene-regulatory dynamics of the developinghuman cerebral cortex at single-cell resolution. *Cell* **184**(19), 5053-5069.e23 (Sep 2021)
 
