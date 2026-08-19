@@ -7,7 +7,7 @@ Standalone package - [BatchRefiner](https://github.com/schafferde/BatchRefiner)
 
 Main reproducibility repository - [https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility](https://github.com/schafferde/task_batch_integration/tree/batchrefiner_reproducibility)
 
-Schäffer, D. E, Kang, H., Aksu, E. D., Edelman, D., Berger, B.: BatchRefiner: fast, significant improvement in batch integration of scRNA-seq cell embeddings with ensemble refinement. *In preparation*
+Schäffer, D. E, Kang, H., Aksu, E. D., Edelman, D., Berger, B.: BatchRefiner: fast, significant improvement in batch integration of single-cell embeddings with ensemble refinement. *In preparation*
 
 ## Data
 ``new_datasets`` contains fourteen scripts and three text files used to parse datasets into `.h5ad` (scRNA-seq) or MatrixMarket-like (scATAC-seq) format from raw counts:
@@ -55,6 +55,8 @@ Trevino, A.E., Müller, F., Andersen, J., *et al*: Chromatin and gene-regulatory
 
 Weinand, K., Langan, E.M., Curtis, M., Raychaudhuri, S.: Defining effective strategies to integrate multi-sample single-nucleus ATAC-seq datasets via a multimodal-guided approach. *bioRxiv* p. 2025.04.02.646871 (Apr 2025)
 
+##  scATAC-seq Embeddings
+The directory `atac_embeddings` contains the scripts we used to generate baseline embeddings of the nine scATAC-seq datasets. 
 
 ##  Modifications for OpenProblems Pipeline
 - We added a new proprocessing workflow and corresponding data loader to process local scRNA-seq datasets in `h5ad` format into OpenProblems common format. This workflow also preserves `obsm` fields and permits empty data fields, thereby supporting scATAC-seq datasets with pre-computed embeddings. 
